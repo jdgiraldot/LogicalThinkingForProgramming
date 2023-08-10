@@ -35,9 +35,9 @@ function showContent(exerciseNumber) {
         <p>
             <button id="btn">Run Code</button>
         </p>
-        <p></p>
-        <h3 id="rta"></h3>
       </div>
+      <p></p>
+      <h3 id="rta"></h3>
       `;
       let runCodeExe1 = document.getElementById('btn')
       runCodeExe1.addEventListener('click', solucionEjercicio1)
@@ -86,10 +86,9 @@ function showContent(exerciseNumber) {
       <div>
         <p>Array de prueba 1: [ 27, 36, 45, 54, 63, 72]<br>Array de prueba 2: [ 27, 36, 45, 54, 42, 72]</p>
         <p><button id="btn1">Run Code Input 1</button> <button id="btn2">Run Code Input 2</button></p>
-        <p></p>
-        <h3 id="rta"></h3>
-        <br>
       </div>
+      <p></p>
+      <h3 id="rta"></h3>
       `;
       let runCodeInput1 = document.getElementById('btn1')
       runCodeInput1.addEventListener('click', solucionEjercicio2a)
@@ -127,9 +126,9 @@ function showContent(exerciseNumber) {
         <p>
           <button id="btn">Run Code</button>
         </p>
-        <p></p>
-        <h3 id="rta"></h3>
       </div>
+      <p></p>
+      <h3 id="rta"></h3>
       `;
       let runCodeExe3 = document.getElementById('btn')
       runCodeExe3.addEventListener('click', solucionEjercicio3)
@@ -164,9 +163,9 @@ function showContent(exerciseNumber) {
         <p>
           <button id="btn">Run Code</button>
         </p>
-        <p></p>
-        <h3 id="rta"></h3>
       </div>
+      <p></p>
+      <h3 id="rta"></h3>
       `;
       let runCodeExe4 = document.getElementById('btn')
       runCodeExe4.addEventListener('click', solucionEjercicio4)
@@ -174,8 +173,42 @@ function showContent(exerciseNumber) {
 
     case 5:
       content.innerHTML = `
-      <h1>Ejercicio 5</h1><p>Contenido del ejercicio 5...</p>
+      <h1>Ejercicio 5 - Reduce el número a 1 en la menor cantidad de pasos</h1>
+      <p>En este desafío vas a recibir un número que tendrás que reducir a uno en la menor cantidad de pasos posibles aplicando las siguientes opreraciones:</p>
+      <ul>
+        <li>Sí es número par puedes divdir por 2</li>
+        <li>Sí es número impar puedes sumar 1 o restar 1. (n+1) o (n-1).</li>
+      </ul>
+      <h2>Código en JavaScrip</h2>
+      <pre><code>function solution(num) {
+
+  let steps = 0
+
+  while (num != 1) {
+    if (num % 2 == 0) {
+      num = num / 2
+    } else if (((num + 1) / 2) % 2 == 0) {
+      num = num + 1
+    } else {
+      num = num - 1
+    }
+    steps++
+  }
+
+  return steps
+}</code></pre>
+      <h2>Probar el código</h2>
+      <div>
+        <p>Ingresa el número que quieres reducir:</p><input type="number" id="num">
+        <p>
+          <button id="btn">Run Code</button>
+        </p>
+      </div>
+      <p></p>
+      <h3 id="rta"></h3>
       `;
+      let runCodeExe5 = document.getElementById('btn')
+      runCodeExe5.addEventListener('click', solucionEjercicio5)
       break;
 
     default:
