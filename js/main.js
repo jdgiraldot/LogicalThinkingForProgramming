@@ -39,8 +39,8 @@ function showContent(exerciseNumber) {
         <h3 id="rta"></h3>
       </div>
       `;
-      let runCode = document.getElementById('btn')
-      runCode.addEventListener('click', solucionEjercicio1)
+      let runCodeExe1 = document.getElementById('btn')
+      runCodeExe1.addEventListener('click', solucionEjercicio1)
       break;
 
     case 2:
@@ -69,7 +69,7 @@ function showContent(exerciseNumber) {
       </ul>
 
       <h2>Código en JavaScrip</h2>
-      <pre><code>export function solution(numbers) {
+      <pre><code>function solution(numbers) {
   let valorInicial = 3
   let tamaño = numbers.length
   let multiplicadorBase = numbers[0] / valorInicial
@@ -81,7 +81,7 @@ function showContent(exerciseNumber) {
     valorInicial++
   }
   return multiplicadorBase
-  }</code></pre>
+}</code></pre>
       <h2>Probar el código</h2>
       <div>
         <p>Array de prueba 1: [ 27, 36, 45, 54, 63, 72]<br>Array de prueba 2: [ 27, 36, 45, 54, 42, 72]</p>
@@ -100,14 +100,76 @@ function showContent(exerciseNumber) {
 
     case 3:
       content.innerHTML = `
-      <h1>Ejercicio 3</h1><p>Contenido del ejercicio 3...</p>
+      <h1>Ejercicio 3 - Operaciones matemáticas</h1>
+      <p>Encuentra la lógica en las siguientes operaciones y números:</p>
+      <ul>
+        <li>3 + 2 = 91</li>
+        <li>5 + 4 = 251</li>
+        <li>9 + 3 = 366</li>
+        <li>8 + 6 = 562</li>
+      </ul>
+      <h2>Solución</h2>
+      <p>Las operaciones correctas para llegar a la solución son las siguientes:</p>
+      <ul>
+        <li>3 (2+1) = 9 : (3-2) = 1 → 91</li>
+        <li>5 (4+1) = 25 : (5-4) = 1 → 251</li>
+        <li>9 (3+1) = 36 : (9-3) = 6 → 366</li>
+        <li>8 (6+1) = 56 : (8-6) = 2 → 562</li>
+      </ul>
+      <h2>Código en JavaScrip</h2>
+      <pre><code>function solucion(num1, num2) {
+  return parseInt(&#96&#36{num1*(num2 + 1)}&#36{num1 - num2}&#96)
+}</code></pre>
+      <h2>Probar el código</h2>
+      <div>
+        <p>Primer número:</p><input type="number" id="num1">
+        <p>Segundo número:</p><input type="number" id="num2">
+        <p>
+          <button id="btn">Run Code</button>
+        </p>
+        <p></p>
+        <h3 id="rta"></h3>
+      </div>
       `;
+      let runCodeExe3 = document.getElementById('btn')
+      runCodeExe3.addEventListener('click', solucionEjercicio3)
       break;
 
     case 4:
       content.innerHTML = `
-      <h1>Ejercicio 4</h1><p>Contenido del ejercicio 4...</p>
+      <h1>Ejercicio 4 - Identifica la operación</h1>
+      <p>Encuentra la lógica en las siguientes operaciones y números:</p>
+      <ul>
+        <li>3 + 2 = 33</li>
+        <li>4 + 8 = 288</li>
+        <li>5 + 3 = 3,140</li>
+        <li>6 + 3 = 46,674</li>
+      </ul>
+      <h2>Solución</h2>
+      <p>Las operaciones correctas para llegar a la solución son las siguientes:</p>
+      <ul>
+        <li>(3^3) = 27 : (3*2) = 6 → 33</li>
+        <li>(4^4) = 256 : (4*8) = 32 → 288</li>
+        <li>(5^5) = 3,125 : (5*3) = 15 → 3,140</li>
+        <li>(6^6) = 46,656 : (6*3) = 18 → 46,674</li>
+      </ul>
+      <h2>Código en JavaScrip</h2>
+      <pre><code>function solucion(num1, num2) {
+  return parseInt(&#96&#36{(num1**num1) + (num1*num2)}&#96)
+}</code></pre>
+      <h2>Probar el código</h2>
+      <div>
+        <p>Primer número:</p><input type="number" id="num1">
+        <p>Segundo número:</p><input type="number" id="num2">
+        <p>
+          <button id="btn">Run Code</button>
+        </p>
+        <p></p>
+        <h3 id="rta"></h3>
+      </div>
       `;
+      let runCodeExe4 = document.getElementById('btn')
+      runCodeExe4.addEventListener('click', solucionEjercicio4)
       break;
 
     case 5:

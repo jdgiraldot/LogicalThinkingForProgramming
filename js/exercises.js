@@ -31,3 +31,23 @@ function solucionEjercicio2(numbers) {
     }
     respuesta.innerHTML = "El resultado es: "+ multiplicadorBase
 }
+
+// Solución Ejercicio 3
+
+function solucionEjercicio3() {
+    let num1 = parseInt(document.getElementById('num1').value)
+    let num2 = parseInt(document.getElementById('num2').value)
+    let respuesta = document.getElementById('rta')
+    
+    respuesta.innerHTML = "El resultado es: "+ parseInt(`${num1*(num2 + 1)}${num1 - num2}`)
+}
+
+// Solución Ejercicio 4
+
+function solucionEjercicio4() {
+    let num1 = parseInt(document.getElementById('num1').value)
+    let num2 = parseInt(document.getElementById('num2').value)
+    let respuesta = document.getElementById('rta')
+    
+    respuesta.innerHTML = "El resultado es: "+ parseInt(`${(num1**num1) + (num1*num2)}`)
+}
