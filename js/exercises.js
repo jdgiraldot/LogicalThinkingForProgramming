@@ -51,3 +51,25 @@ function solucionEjercicio4() {
     
     respuesta.innerHTML = "El resultado es: "+ parseInt(`${(num1**num1) + (num1*num2)}`)
 }
+
+// Solución Ejercicio 5
+
+function solucionEjercicio5() {
+    let num = parseInt(document.getElementById('num').value)
+    let respuesta = document.getElementById('rta')
+
+    let steps = 0
+  
+    while (num != 1) {
+      if (num % 2 == 0) {
+        num = num / 2
+      } else if (((num + 1) / 2) % 2 == 0) {
+        num = num + 1
+      } else {
+        num = num - 1
+      }
+      steps++
+    }
+    
+    respuesta.innerHTML = "La cantidad de pasos necesarios: "+ steps
+}
