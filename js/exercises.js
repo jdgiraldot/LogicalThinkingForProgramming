@@ -9,3 +9,25 @@ function solucionEjercicio1() {
 }
 
 // Solución Ejercicio 2
+function solucionEjercicio2a() {
+    solucionEjercicio2([27,36,45,54,63,72])
+}
+function solucionEjercicio2b() {
+    solucionEjercicio2([27,36,45,54,42,72])
+}
+
+function solucionEjercicio2(numbers) {
+    let valorInicial = 3
+    let tamaño = numbers.length
+    let multiplicadorBase = numbers[0] / valorInicial
+    let respuesta = document.getElementById('rta')
+  
+    for (let i = 0; i < tamaño; i++) {
+      if (multiplicadorBase != (numbers[i] / valorInicial)) {
+        respuesta.innerHTML = "El resultado es: "+ false
+        return
+      }
+      valorInicial++
+    }
+    respuesta.innerHTML = "El resultado es: "+ multiplicadorBase
+}
